@@ -4,6 +4,8 @@ Code for NeurIPS 2024 paper: "Noether's razor: Learning Conserved Quantities"
 
 Arxiv link: [https://arxiv.org/abs/2410.08087](https://arxiv.org/abs/2410.08087)
 
+![Animation](https://github.com/tychovdo/noether-reborn/blob/main/plots/animation_3d_5_v2.gif)
+
 ### Example usage
 
 ```
