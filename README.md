@@ -36,6 +36,10 @@ print(trajectories.reshape(10, 20, 2, 3, 4)) # optionally reshaped to (n_traject
 
 The generation code also supports automatic saving/loading using `save_name` argument.
 
+### Questions?
+
+Please drop us an email.
+
 ### Citation
 
 ```
