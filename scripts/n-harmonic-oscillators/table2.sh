@@ -1,0 +1,14 @@
+#!/bin/bash
+cd ../..
+
+export XLA_PYTHON_CLIENT_MEM_FRACTION=0.99
+
+python main.py --group quadratic_learn30 --batch_size 10 --train_size 200 --train_steps 50 --steps 20 --stepsize 0.20 --sym_steps 100 --vi --measure_scale 1.0 --init_prior_var 1 --output_var 0.001 --output_noise 0.001 --dynamics nharm_3 --act_fun elu --n_layers 3 --n_hidden 200 --sym_samples 100 --sym_over_path --lr_param 0.001 --mc_samples 5 --n_epochs 2000 --fixed_basis_scale 1.0 --seed 105 --measure_dist ball
+python main.py --train_size 200 --batch_size 10 --train_steps 50 --steps 20 --stepsize 0.20 --sym_steps 100 --vi --measure_scale 1.0 --init_prior_var 1 --output_var 0.001 --output_noise 0.001 --dynamics nharm_3 --act_fun elu --n_layers 3 --n_hidden 200 --sym_samples 100 --sym_over_path --lr_param 0.001 --mc_samples 5 --n_epochs 2000 --fixed_basis_scale 1.0 --seed 105 --measure_dist ball
+python main.py --group quadratic_un --batch_size 10 --train_size 200 --train_steps 50 --steps 20 --stepsize 0.20 --sym_steps 100 --vi --measure_scale 1.0 --init_prior_var 1 --output_var 0.001 --output_noise 0.001 --dynamics nharm_3 --act_fun elu --n_layers 3 --n_hidden 200 --sym_samples 100 --sym_over_path --lr_param 0.001 --mc_samples 5 --n_epochs 2000 --fixed_basis_scale 1.0 --seed 105 --measure_dist ball
+
+python main.py --group quadratic_learn30 --batch_size 10 --train_size 200 --train_steps 50 --steps 20 --stepsize 0.20 --sym_steps 100 --vi --measure_scale 1.0 --init_prior_var 1 --output_var 0.001 --output_noise 0.001 --dynamics nharm_1 --act_fun elu --n_layers 3 --n_hidden 200 --sym_samples 100 --sym_over_path --lr_param 0.001 --mc_samples 5 --n_epochs 2000 --fixed_basis_scale 1.0 --seed 105 --measure_dist ball
+python main.py --group quadratic_learn30 --batch_size 10 --train_size 200 --train_steps 50 --steps 20 --stepsize 0.20 --sym_steps 100 --vi --measure_scale 1.0 --init_prior_var 1 --output_var 0.001 --output_noise 0.001 --dynamics nharm_2 --act_fun elu --n_layers 3 --n_hidden 200 --sym_samples 100 --sym_over_path --lr_param 0.001 --mc_samples 5 --n_epochs 2000 --fixed_basis_scale 1.0 --seed 105 --measure_dist ball
+python main.py --group quadratic_learn30 --batch_size 10 --train_size 200 --train_steps 50 --steps 20 --stepsize 0.20 --sym_steps 100 --vi --measure_scale 1.0 --init_prior_var 1 --output_var 0.001 --output_noise 0.001 --dynamics nharm_4 --act_fun elu --n_layers 3 --n_hidden 200 --sym_samples 100 --sym_over_path --lr_param 0.001 --mc_samples 5 --n_epochs 2000 --fixed_basis_scale 1.0 --seed 105 --measure_dist ball
+python main.py --group quadratic_learn30 --batch_size 10 --train_size 200 --train_steps 50 --steps 20 --stepsize 0.20 --sym_steps 100 --vi --measure_scale 1.0 --init_prior_var 1 --output_var 0.001 --output_noise 0.001 --dynamics nharm_5 --act_fun elu --n_layers 3 --n_hidden 200 --sym_samples 100 --sym_over_path --lr_param 0.001 --mc_samples 5 --n_epochs 2000 --fixed_basis_scale 1.0 --seed 105 --measure_dist ball
+

@@ -1,0 +1,10 @@
+pathlib
+matplotlib
+numpy
+tqdm
+wandb
+
+jax
+diffrax
+optax
+

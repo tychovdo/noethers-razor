@@ -1,9 +1,12 @@
-# Noether's razor
+# Noether Reborn
 
-Code for NeurIPS 2024 paper: "Noether's razor: learning conserved quantities" 
-by Tycho F. A. van der Ouderaa, Mark van der Wilk and Pim de Haan
+Overleaf: [https://www.overleaf.com/5654719818bjzdqtpxmfhm#4fba4c](https://www.overleaf.com/5654719818bjzdqtpxmfhm#4fba4c)
 
-### Examples
+![Animation](https://github.com/tychovdo/noether-reborn/blob/main/plots/animation_3d_5_v2.gif)
+
+### Reproducability / Experiments from paper
+
+Code examples for experiments from original paper:
 
 | Method | Symmetry | Dynamics | Code  | 
 |---|---|---|---|
@@ -22,6 +25,7 @@ The following dynamical systems are currently supported:
 |---|---|---|---|---|
 |Phase| Harmonic Oscillator | `--dynamics harmonic-oscillator` | Trajectory and energy plots supported. | Standard undampened harmonic oscillator. 
 |Phase| N-body (e.g. 3-dimensional, 5 bodies) | `--dynamics nbody_3d_5b` | Trajectory plotting supported in 2d and 3d. | Supports arbitrary dimension and number of bodies `nbody_*d_*b`. 
+|Pixel| Pixel N-body (e.g. 3-dimensional, 5 bodies) | `--dynamics pixel_nbody_3d_5b` | Trajectory plotting supported in 2d. | Supports arbitrary dimension and number of bodies `nbody_*d_*b`. 
 
 New dynamical systems can easily be added by inheriting the `Dynamics` class in `dynamics.py`, which only requires specifying the Hamiltonian `dynamics.H()` of the system. Optionally, plotting functions can be added to this class. See implementations of existing dynamical systems as reference.
 
@@ -55,4 +59,3 @@ The generation code also supports automatic saving/loading using `save_name` arg
   year={2024}
 }
 ```
-# noethers-razor

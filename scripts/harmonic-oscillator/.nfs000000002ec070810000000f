@@ -1,0 +1,7 @@
+#!/bin/bash
+cd ../..
+
+export XLA_PYTHON_CLIENT_MEM_FRACTION=0.99
+
+python main.py --method hnn --group learn --batch_size 10 --steps 2 --vi --measure_scale 1.0 --init_prior_var 1 --output_var 0.001 --output_var_method emp --prior_noise_method hypers --dynamics harmonic-oscillator --train_size 5
+
