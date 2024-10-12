@@ -1,33 +1,18 @@
-# Noether Reborn
+# Noether's razor
 
-Overleaf: [https://www.overleaf.com/5654719818bjzdqtpxmfhm#4fba4c](https://www.overleaf.com/5654719818bjzdqtpxmfhm#4fba4c)
+Code for NeurIPS 2024 paper: "Noether's razor: Learning Conserved Quantities"
 
-![Animation](https://github.com/tychovdo/noether-reborn/blob/main/plots/animation_3d_5_v2.gif)
+Arxiv link: [https://arxiv.org/abs/2410.08087](https://arxiv.org/abs/2410.08087)
 
-### Reproducability / Experiments from paper
+### Example usage
 
-Code examples for experiments from original paper:
+```
+python main.py --group quadratic_learn1 --train_size 7 --train_steps 4 --steps 20 --stepsize 0.20 --sym_steps 50 --vi --dynamics harmonic-oscillator --sym_samples 200 --sym_over_path --n_epochs 5000
+```
 
-| Method | Symmetry | Dynamics | Code  | 
-|---|---|---|---|
-| NN | - | 2d 3-body | `python main.py --dynamics nbody_2d_3b` |
-| NN | Oracle SE(2) symmetry | 2d 3-body | `python main.py --dynamics nbody_2d_3b --group se2` |
-| NN | Learned symmetry | 2d 3-body | `python main.py --dynamics nbody_2d_3b --group learn` |
-| HNN | - | 2d 3-body | `python main.py --dynamics nbody_2d_3b --vi` |
-| HNN | Oracle SE(2) symmetry | 2d 3-body | `python main.py --dynamics nbody_2d_3b --group se2 --vi` |
-| HNN | Learned symmetry | 2d 3-body | `python main.py --dynamics nbody_2d_3b --group learn --vi` |
+### Dynamical systems
 
-### Supported dynamical systems
-
-The following dynamical systems are currently supported:
-
-| Phase / Pixels | Dynamics | Symmetry | Availability of plotting code | Information
-|---|---|---|---|---|
-|Phase| Harmonic Oscillator | `--dynamics harmonic-oscillator` | Trajectory and energy plots supported. | Standard undampened harmonic oscillator. 
-|Phase| N-body (e.g. 3-dimensional, 5 bodies) | `--dynamics nbody_3d_5b` | Trajectory plotting supported in 2d and 3d. | Supports arbitrary dimension and number of bodies `nbody_*d_*b`. 
-|Pixel| Pixel N-body (e.g. 3-dimensional, 5 bodies) | `--dynamics pixel_nbody_3d_5b` | Trajectory plotting supported in 2d. | Supports arbitrary dimension and number of bodies `nbody_*d_*b`. 
-
-New dynamical systems can easily be added by inheriting the `Dynamics` class in `dynamics.py`, which only requires specifying the Hamiltonian `dynamics.H()` of the system. Optionally, plotting functions can be added to this class. See implementations of existing dynamical systems as reference.
+New dynamical systems can be added by inheriting the `Dynamics` class in `dynamics.py`, which only requires specifying the Hamiltonian `dynamics.H()` of the system. Optionally, plotting functions can be added to this class. See implementations of existing dynamical systems as reference.
 
 ### Use data generator in your project
 

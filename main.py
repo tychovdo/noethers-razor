@@ -245,9 +245,9 @@ if __name__=='__main__':
     parser.add_argument('--stepsize', type=float, default=0.1)
     parser.add_argument('--n_conserved', type=int, default=3)
 
-    parser.add_argument('--n_hidden', type=int, default=500) # architecture
-    parser.add_argument('--n_layers', type=int, default=4)
-    parser.add_argument('--act_fun', type=str, default='elu')
+    parser.add_argument('--n_hidden', type=int, default=200) # architecture
+    parser.add_argument('--n_layers', type=int, default=3)
+    parser.add_argument('--act_fun', type=str, default='elu2')
     parser.add_argument('--fixed_basis', action='store_true')
     parser.add_argument('--fixed_basis_scale', type=float, default=1.0)
     parser.add_argument('--basis_prec', type=float, default=1.0)
@@ -275,7 +275,7 @@ if __name__=='__main__':
     parser.add_argument('--sym_samples', type=int, default=16)
     parser.add_argument('--sym_over_path', action='store_true')
     parser.add_argument('--stl', action='store_true')
-    parser.add_argument('--mc_samples', type=int, default=10)
+    parser.add_argument('--mc_samples', type=int, default=20)
     parser.add_argument('--output_var_method', type=str, default='fixed')
     parser.add_argument('--prior_prec_method', type=str, default='gradients')
     parser.add_argument('--init_posterior_scale', type=float, default=10.0)
